@@ -79,6 +79,9 @@ void TrackletsTask::buildHistograms()
     getObjectsManager()->setDefaultDrawOptions(moHCMCM[sm]->GetName(), "COLZ");
     drawLinesMCM(moHCMCM[sm].get());
   }
+
+
+
   mTrackletSlope.reset(new TH1F("trackletslope", "uncalibrated Slope of tracklets", 1024, -6.0, 6.0)); // slope is 8 bits in the tracklet
   getObjectsManager()->startPublishing(mTrackletSlope.get());
   mTrackletSlopeRaw.reset(new TH1F("trackletsloperaw", "Raw Slope of tracklets", 256, 0, 256)); // slope is 8 bits in the tracklet
